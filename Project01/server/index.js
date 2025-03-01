@@ -11,6 +11,7 @@ app.use(cors(
         credentials: true
     }
 ));
+
 app.use(express.json());
 
 mongoose.connect(
@@ -37,3 +38,16 @@ app.listen(4800, ()=>{
     console.log("server is listening");
     
 })
+
+// { 
+//     "version": 2,
+//     "builds": [
+//         {"src": "*.js", "use": "@vercel/node" }
+//     ],
+//     "routes": [
+//         {
+//             "src": "/(.*)",
+//             "dest": "/"
+//         }
+//     ]
+// }
